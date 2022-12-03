@@ -1,0 +1,26 @@
+
+CL-USER 1 > (defun mystery(x) 
+              (let ((result 1))
+                (dotimes (count x result)
+                  (setf result (* ( + 1 count) result)))))
+MYSTERY
+
+CL-USER 2 > mystery 5
+120
+
+CL-USER 3 > mystery 4
+24
+
+CL-USER 4 > mystery 3
+6
+
+CL-USER 5 > mystery 2
+2
+
+CL-USER 6 > mystery 1
+1
+
+CL-USER 7 > mystery 0
+1
+
+CL-USER 8 > 
