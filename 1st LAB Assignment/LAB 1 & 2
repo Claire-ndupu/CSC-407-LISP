@@ -1,0 +1,44 @@
+
+CL-USER 1 > (defun square (length) 
+(* length length))
+SQUARE
+
+CL-USER 2 > (square 5)
+25
+
+CL-USER 3 > (defun average ( x y)
+(/(+ x y )2))
+AVERAGE
+
+
+CL-USER 5 : 1 > (average 4 8)
+6
+
+CL-USER 6 : 1 > (setf x '(1 2 3 4 5))
+(1 2 3 4 5)
+
+CL-USER 7 : 1 > (setf f (first x))
+1
+
+CL-USER 8 : 1 > (setf f (rest x))
+(2 3 4 5)
+
+CL-USER 9 : 1 > f
+(2 3 4 5)
+
+CL-USER 10 : 1 > (setf f (first x))
+1
+
+CL-USER 11 : 1 > (setf l (last x))
+(5)
+
+CL-USER 12 : 1 > (setf l (second x))
+2
+
+CL-USER 13 : 1 > (setf l (fourth x))
+4
+
+CL-USER 14 : 1 > (nth 0 x)
+1
+
+CL-USER 15 : 1 > 

@@ -1,0 +1,8 @@
+
+CL-USER 1 > (setf x '(1 1 2 2 3 3 4 4))
+(1 1 2 2 3 3 4 4)
+
+CL-USER 2 > (remove-duplicates x :from-end t)
+(1 2 3 4)
+
+CL-USER 3 > 

@@ -1,0 +1,30 @@
+
+CL-USER 1 > (defun count-atoms (x)
+(cond ((endp x) 0)
+((atom x) 1)
+(+ (+ (count-atoms (first x))
+(count-atoms (rest x))))))
+COUNT-ATOMS
+
+CL-USER 2 > (setf list '( t (g h ) h ( i j)))
+(T (G H) H (I J))
+
+
+
+CL-USER 4 : 1 > list
+(T (G H) H (I J))
+
+CL-USER 5 : 1 > (defun count-atoms (x)
+(cond ((null x) 0)
+((atom x) 1)
+(+ (+ (count-atoms (first x))
+(count-atoms (rest x))))))
+COUNT-ATOMS
+
+CL-USER 6 : 1 > count-atoms list
+6
+
+CL-USER 7 : 1 > (count-atoms list)
+6
+
+CL-USER 8 : 1 > 

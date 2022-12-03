@@ -1,0 +1,87 @@
+
+CL-USER 1 > gcd 5 3
+1
+
+CL-USER 2 > gcd 5 4 
+1
+
+CL-USER 3 > (defun g-c-d(m n)
+                    (cond ((= n 0) m)
+                           ((> n m) (g-c-d n m) )
+                           ((> n 0) (g-c-d n (mod m n) ))
+                           (t 'enter-a-number)
+                           ))
+G-C-D
+
+CL-USER 4 > g-c-d 5 4
+1
+
+CL-USER 5 > g-c-d 60 12
+12
+
+CL-USER 6 > g-c-d 12 60
+12
+
+CL-USER 7 > g-c-d 5 4
+1
+
+CL-USER 8 > g-c-d 5 3
+1
+
+CL-USER 9 > g-c-d 50 10
+10
+
+
+
+
+CL-USER 13 : 3 > (defun g-c-d(m n)
+                    (cond ((= n 0) m)
+                           ((> n m) (g-c-d n m) )
+                           ((> n 0) (g-c-d n (mod m n) ))  ))
+G-C-D
+
+CL-USER 14 : 3 > g-c-d 12 60
+12
+
+CL-USER 15 : 3 > g-c-d 60 12
+12
+
+CL-USER 16 : 3 > gcd 60 12
+12
+
+CL-USER 17 : 3 > gcd 12 60
+12
+
+CL-USER 18 : 3 > gcd 5 30
+5
+
+CL-USER 19 : 3 > gcd 121 11
+11
+
+CL-USER 20 : 3 > g-c-d 121 11
+11
+
+CL-USER 21 : 3 > g-c-d 120 2
+2
+
+CL-USER 22 : 3 > gcd 120 2
+2
+
+CL-USER 23 : 3 > g-c-d 12 6
+6
+
+CL-USER 24 : 3 > g-c-d 16 12
+4
+
+CL-USER 25 : 3 > gcd 16 12
+4
+
+CL-USER 26 : 3 > (defun g-c-d(m n)
+                    (cond ((= n 0) (print m))
+                           ((> n m) (g-c-d n m) )
+                           ((> n 0) (g-c-d n (mod m n) ))
+                          
+                           ))
+G-C-D
+
+CL-USER 27 : 3 > 

@@ -1,0 +1,23 @@
+
+CL-USER 1 > (defun f(n)
+                       (if (or (= n 1) (= n 2))
+                           1
+                         ( + (f(- n 1)) (f(- n 2)))))
+F
+
+CL-USER 2 > f 1
+1
+
+CL-USER 3 > f 2
+1
+
+CL-USER 4 > f 3
+2
+
+CL-USER 5 > f 4
+3
+
+CL-USER 6 > f 5
+5
+
+CL-USER 7 > 
